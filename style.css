@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh; 
+    display: flex;
+    align-items: center;     
+    justify-content: center; 
+    background-color: #140014; 
+
+}
+
+.game-board{
+    width: 90%;
+    height: 500px;
+    border: 1px solid #000000;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    background-image: url(imagens/paisagem.png);
+    background-size: cover;
+    background-position: center bottom;
+}
+
+.pipe {
+    position: absolute;
+    bottom: 15px;
+    width: 150px;  
+    filter: drop-shadow(5px 8px 4px rgba(0, 0, 0, 0.671));
+    animation: pipe-animation 2s infinite linear; 
+}
+
+.monstro {
+    transform: scaleX(1);
+    width: 460px;
+    bottom: 20px;
+    filter: drop-shadow(0px 5px 4px rgba(0,0,0,0.5));
+    position: absolute;
+}
+
+.jump {
+    animation: jump 500ms infinite ease-out;
+}
+
+.clouds {
+    position: absolute;
+    width: 700px;
+    animation: clouds-animation 20s infinite linear;
+}
+
+.clouds2 {
+    position: absolute;
+    width: 500px;
+    animation: clouds-animation 28s infinite linear;
+}
+
+.clouds3 {
+    position: absolute;
+    width: 400px;
+    bottom: 105px;
+    animation: clouds-animation 35s infinite linear;
+}
+
+.borboleta {
+    position: absolute;
+    width: 100px;
+    bottom: -30px;
+    animation: clouds-animation 10s infinite linear;
+}
+
+
+
+@keyframes pipe-animation {
+    from {
+        right: -200px;
+    }
+
+    to {
+        right: 100%
+    }
+}
+
+
+@keyframes jump {
+    0% {
+       bottom: 0;
+    }
+
+    50% {
+        bottom: 310px;
+    }
+
+    60% {
+        bottom: 310px;
+    }
+
+    70% {
+        bottom: 310px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -400px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
